@@ -1,5 +1,9 @@
 Some MicroPython projects for micro:bit V2.
 
+# Useful links
+
+Some things I find useful.
+
 ### Editor
 
 Mu [https://codewith.mu/](https://codewith.mu/)
