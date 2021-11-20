@@ -1,4 +1,4 @@
-Some MicroPython projects for micro:bit.
+Some MicroPython projects for micro:bit V2.
 
 ### Editor
 
