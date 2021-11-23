@@ -44,6 +44,36 @@ BUTTON_B = Image((
 
 BUTTON_B_SOUND = ("C:4", )  #("C:3", "r:1")
 
+PIN_0 = Image((
+    "05550:"
+    "50005:"
+    "50005:"
+    "50005:"
+    "05550:"
+))
+
+PIN_0_SOUND = ("G:4", )
+
+PIN_1 = Image((
+    "00000:"
+    "00500:"
+    "00500:"
+    "00500:"
+    "00000:"
+))
+
+PIN_1_SOUND = ("B:4", )
+
+PIN_2 = Image((
+    "00000:"
+    "05050:"
+    "05050:"
+    "05050:"
+    "00000:"
+))
+
+PIN_2_SOUND = ("D:4", )
+
 # The game uses the music tempo as the tempo to display images
 music.set_tempo(bpm=60)
 
@@ -54,16 +84,19 @@ int_to_img_sound = {
     1: (PIN_LOGO, PIN_LOGO_SOUND),
     2: (BUTTON_A, BUTTON_A_SOUND),
     3: (BUTTON_B, BUTTON_B_SOUND),
+    4: (PIN_0, PIN_0_SOUND),
+    5: (PIN_1, PIN_1_SOUND),
+    6: (PIN_2, PIN_2_SOUND),
 }
 
 simon_said = []
 for _ in range(3):
-    simon_said.append(random.randint(1, 3))
+    simon_said.append(random.randint(1, 6))
 
 repeated = []
 
 successful_game = True
-for _ in range(7):
+for _ in range(5):
     for instruction in simon_said:
         img, sound = int_to_img_sound[instruction]
         display.show(img, SOUND_DURATION_MS, wait=False)
